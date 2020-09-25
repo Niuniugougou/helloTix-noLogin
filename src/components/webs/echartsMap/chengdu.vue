@@ -8,7 +8,6 @@
 import echarts from "echarts";
 import geoJson from "@/components/webs/echartsMap/common/mapData"
 import mapPoint from "@/components/webs/echartsMap/common/mapPoint"
-// import mapPointData from '@/components/webs/echartsMap/common/mapPointData'
 export default {
     data () {
         return {

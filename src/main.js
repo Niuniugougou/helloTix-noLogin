@@ -77,6 +77,7 @@ new Vue({
 
     this.renrenMenuToD2AdminMenu(menuList.children)
     this.$store.commit('d2admin/menu/asideSet', this.menuAsidesAll)
+    this.$store.commit('d2admin/search/init', this.menuAsidesAll);
 
     //建议用localstorage做路由的缓存
 
