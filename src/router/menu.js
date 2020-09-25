@@ -45,24 +45,24 @@ module.exports = {
                     "icon": "edit",
                     "children": []
                 },
-                {
-                    "id": "1213",
-                    "parentId": "121",
-                    "url": "/admin/articlemanage",
-                    "name": "文章管理",
-                    "sequence": 1,
-                    "icon": "edit",
-                    "children": []
-                },
-                {
-                    "id": "1214",
-                    "parentId": "121",
-                    "url": "/admin/articletypemanage",
-                    "name": "文章类型管理",
-                    "sequence": 1,
-                    "icon": "edit",
-                    "children": []
-                }
+                // {
+                //     "id": "1213",
+                //     "parentId": "121",
+                //     "url": "/admin/articlemanage",
+                //     "name": "文章管理",
+                //     "sequence": 1,
+                //     "icon": "edit",
+                //     "children": []
+                // },
+                // {
+                //     "id": "1214",
+                //     "parentId": "121",
+                //     "url": "/admin/articletypemanage",
+                //     "name": "文章类型管理",
+                //     "sequence": 1,
+                //     "icon": "edit",
+                //     "children": []
+                // }
                 ]
             },
             // {
@@ -74,26 +74,26 @@ module.exports = {
             //     "icon": "mail",
             //     "children": []
             // },
-            {
-                "id": "124",
-                "parentId": "12",
-                "url": "/admin/banner",
-                "name": "首页轮播",
-                "sequence": 3,
-                "icon": "news",
-                "children": []
-            }
+            // {
+            //     "id": "124",
+            //     "parentId": "12",
+            //     "url": "/admin/banner",
+            //     "name": "首页轮播",
+            //     "sequence": 3,
+            //     "icon": "news",
+            //     "children": []
+            // }
             ]
         },
-        {
-            "id": "13",
-            "parentId": "1",
-            "url": "/admin/user",
-            "name": "用户管理",
-            "sequence": 3,
-            "icon": "group",
-            "children": []
-        },
+        // {
+        //     "id": "13",
+        //     "parentId": "1",
+        //     "url": "/admin/user",
+        //     "name": "用户管理",
+        //     "sequence": 3,
+        //     "icon": "group",
+        //     "children": []
+        // },
         {
             "id": "14",
             "parentId": "1",
@@ -110,15 +110,15 @@ module.exports = {
                 "icon": "news",
                 "children": []
             },
-            {
-                "id": "142",
-                "parentId": "14",
-                "url": "/admin/commentsmanage",
-                "name": "评论管理",
-                "sequence": 4,
-                "icon": "news",
-                "children": []
-            },
+            // {
+            //     "id": "142",
+            //     "parentId": "14",
+            //     "url": "/admin/commentsmanage",
+            //     "name": "评论管理",
+            //     "sequence": 4,
+            //     "icon": "news",
+            //     "children": []
+            // },
             {
                 "id": "143",
                 "parentId": "14",
@@ -192,7 +192,16 @@ module.exports = {
                     "sequence": 4,
                     "icon": "news",
                     "children": []
-                }
+                },
+                {
+                    "id": "155",
+                    "parentId": "15",
+                    "url": "/admin/map",
+                    "name": "不一样的地图",
+                    "sequence": 5,
+                    "icon": "news",
+                    "children": []
+                },
             ]
         },
         ]

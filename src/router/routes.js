@@ -78,6 +78,11 @@ const frameIn = [
         meta: { title: '不一样的进度条' }
       },
       {
+        path: '/admin/map',
+        component: resolve => require(['../components/webs/echartsMap/chengdu.vue'], resolve),
+        meta: { title: '不一样的地图' }
+      },
+      {
         path: '/admin/editTable',
         component: resolve => require(['../components/webs/editTable/editTable.vue'], resolve),
         meta: { title: '可编辑table' }

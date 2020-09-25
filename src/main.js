@@ -55,7 +55,7 @@ Vue.prototype.$http = axios;
 // import VXETable from 'vxe-table'
 // import 'vxe-table/lib/index.css'
 // Vue.use(VXETable)
-
+import { menuList } from '@/router/menu'
 new Vue({
   router,
   store,
@@ -75,15 +75,18 @@ new Vue({
     // 设置侧边栏菜单
     // this.$store.commit('d2admin/menu/asideSet', menuAside)
 
-    const token = util.cookies.get('token')
-    if (token && token !== 'undefined') {
-      GetMenus().then((res) =>{
-        this.renrenMenuToD2AdminMenu(res.children)
-        this.$store.commit('d2admin/menu/asideSet', this.menuAsidesAll)
-      })
-    }
+    this.renrenMenuToD2AdminMenu(menuList.children)
+    this.$store.commit('d2admin/menu/asideSet', this.menuAsidesAll)
 
+    //建议用localstorage做路由的缓存
 
+    // const token = util.cookies.get('token')
+    // if (token && token !== 'undefined') {
+    //   GetMenus().then((res) =>{
+    //     this.renrenMenuToD2AdminMenu(res.children)
+    //     this.$store.commit('d2admin/menu/asideSet', this.menuAsidesAll)
+    //   })
+    // }
   },
   mounted () {
     // 展示系统信息
