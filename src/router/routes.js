@@ -88,6 +88,11 @@ const frameIn = [
         meta: { title: '可编辑table' }
       },
       {
+        path: '/admin/markWater',
+        component: resolve => require(['../components/webs/markWater/markWater.vue'], resolve),
+        meta: { title: '底部加水印' }
+      },
+      {
         path: '/admin/editTree',
         component: resolve => require(['../components/webs/editTree/editTree.vue'], resolve),
         meta: { title: '可编辑Tree' }

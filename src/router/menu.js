@@ -202,6 +202,15 @@ module.exports = {
                     "icon": "news",
                     "children": []
                 },
+                {
+                    "id": "156",
+                    "parentId": "15",
+                    "url": "/admin/markWater",
+                    "name": "底部加水印",
+                    "sequence": 6,
+                    "icon": "news",
+                    "children": []
+                },
             ]
         },
         ]
