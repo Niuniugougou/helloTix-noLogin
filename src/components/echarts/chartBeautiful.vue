@@ -1,9 +1,14 @@
 <template>
     <div>
-        <div ref='countCharts'
-             style="height: 200px;width: 370px;"></div>
-        <div ref="caseAboutYear"
-             style="height: 200px;width: 370px;"></div>
+        <transition enter-active-class="animate__animated animate__jackInTheBox" leave-active-class="animate__animated animate__fadeOutRightBig">
+            <div ref='countCharts'
+                style="height: 200px;width: 370px;"
+                class=""></div>
+        </transition>
+        <transition enter-active-class="animate__animated animate__fadeIn animate__delay-1s" leave-active-class="animate__animated animate__fadeOut">
+            <div ref="caseAboutYear"
+                style="height: 200px;width: 370px;"></div>
+        </transition>
     </div>
 </template>
 <script>

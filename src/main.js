@@ -56,6 +56,10 @@ Vue.prototype.$http = axios;
 // import 'vxe-table/lib/index.css'
 // Vue.use(VXETable)
 import { menuList } from '@/router/menu'
+
+import animate from 'animate.css'
+Vue.use(animate)
+
 new Vue({
   router,
   store,
