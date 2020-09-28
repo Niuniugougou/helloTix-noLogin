@@ -24,6 +24,9 @@
     <div>
       <chartPie></chartPie>
     </div>
+    <div>
+      <chartBeautiful></chartBeautiful>
+    </div>
   </d2-container>
 </template>
 
@@ -31,13 +34,15 @@
 import chartLine from "@/components/v-chart/chartsLine.vue"
 import chartScatter from "@/components/v-chart/chartScatter.vue"
 import chartPie from "@/components/v-chart/chartPie.vue"
+import chartBeautiful from "@/components/echarts/chartBeautiful.vue"
 import { dashboard } from "@/api/allactions";
 export default {
   name: "dashboard",
   components: {
     chartLine,
     chartScatter,
-    chartPie
+    chartPie,
+    chartBeautiful
   },
   data() {
     this.chartSettings = {

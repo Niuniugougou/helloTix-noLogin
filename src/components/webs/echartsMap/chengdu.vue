@@ -1,7 +1,6 @@
 <template>
     <d2-container>
-        <div ref="mapDiv"
-             style="width:100%;height: 100%;"></div>
+        <div ref="mapDiv" style="width:100%;height: 100%;"></div>
     </d2-container>
 </template>
 <script>
@@ -9,11 +8,7 @@ import echarts from "echarts";
 import geoJson from "@/components/webs/echartsMap/common/mapData"
 import mapPoint from "@/components/webs/echartsMap/common/mapPoint"
 export default {
-    data () {
-        return {
-
-        }
-    },
+    name: 'chengduMap',
     mounted() {
         this.mapInit();
     },
