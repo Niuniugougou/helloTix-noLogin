@@ -103,6 +103,11 @@ const frameIn = [
         meta: { title: '可拖拽流程图' }
       },
       {
+        path: '/admin/battery',
+        component: resolve => require(['../components/webs/battery/battery.vue'], resolve),
+        meta: { title: '充电css动画' }
+      },
+      {
           path: '/404',
           component: resolve => require(['../components/page/404.vue'], resolve),
           meta: { title: '404' }

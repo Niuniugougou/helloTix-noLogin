@@ -211,6 +211,15 @@ module.exports = {
                     "icon": "news",
                     "children": []
                 },
+                {
+                    "id": "157",
+                    "parentId": "15",
+                    "url": "/admin/battery",
+                    "name": "充电css动画",
+                    "sequence": 7,
+                    "icon": "news",
+                    "children": []
+                },
             ]
         },
         ]
