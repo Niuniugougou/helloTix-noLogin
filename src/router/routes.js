@@ -108,6 +108,11 @@ const frameIn = [
         meta: { title: '充电css动画' }
       },
       {
+        path: '/admin/3Dcube',
+        component: resolve => require(['../components/webs/3Dcube/3Dcube.vue'], resolve),
+        meta: { title: '3Dcube' }
+      },
+      {
           path: '/404',
           component: resolve => require(['../components/page/404.vue'], resolve),
           meta: { title: '404' }

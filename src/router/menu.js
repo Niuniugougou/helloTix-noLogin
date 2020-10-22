@@ -220,6 +220,15 @@ module.exports = {
                     "icon": "news",
                     "children": []
                 },
+                {
+                    "id": "158",
+                    "parentId": "15",
+                    "url": "/admin/3Dcube",
+                    "name": "3Dcube",
+                    "sequence": 8,
+                    "icon": "news",
+                    "children": []
+                },
             ]
         },
         ]
