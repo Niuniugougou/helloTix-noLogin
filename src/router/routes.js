@@ -113,6 +113,11 @@ const frameIn = [
         meta: { title: '3Dcube' }
       },
       {
+        path: '/admin/dialogDrag',
+        component: resolve => require(['../components/webs/dialogDrag/dialogDrag.vue'], resolve),
+        meta: { title: 'element拖拽弹框' }
+      },
+      {
           path: '/404',
           component: resolve => require(['../components/page/404.vue'], resolve),
           meta: { title: '404' }

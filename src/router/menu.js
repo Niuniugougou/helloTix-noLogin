@@ -229,6 +229,15 @@ module.exports = {
                     "icon": "news",
                     "children": []
                 },
+                {
+                    "id": "159",
+                    "parentId": "15",
+                    "url": "/admin/dialogDrag",
+                    "name": "element拖拽弹框",
+                    "sequence": 8,
+                    "icon": "news",
+                    "children": []
+                },
             ]
         },
         ]
