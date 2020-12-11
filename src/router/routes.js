@@ -118,6 +118,11 @@ const frameIn = [
         meta: { title: 'element拖拽弹框' }
       },
       {
+        path: '/admin/G6Demo',
+        component: resolve => require(['../components/webs/G6Demo/G6Demo1.vue'], resolve),
+        meta: { title: 'G6Demo' }
+      },
+      {
           path: '/404',
           component: resolve => require(['../components/page/404.vue'], resolve),
           meta: { title: '404' }

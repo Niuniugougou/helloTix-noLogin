@@ -234,7 +234,16 @@ module.exports = {
                     "parentId": "15",
                     "url": "/admin/dialogDrag",
                     "name": "element拖拽弹框",
-                    "sequence": 8,
+                    "sequence": 9,
+                    "icon": "news",
+                    "children": []
+                },
+                {
+                    "id": "160",
+                    "parentId": "15",
+                    "url": "/admin/G6Demo",
+                    "name": "G6Demo1",
+                    "sequence": 10,
                     "icon": "news",
                     "children": []
                 },
