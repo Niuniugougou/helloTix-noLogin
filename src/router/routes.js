@@ -97,11 +97,11 @@ const frameIn = [
         component: resolve => require(['../components/webs/editTree/editTree.vue'], resolve),
         meta: { title: '可编辑Tree' }
       },
-      {
-        path: '/admin/process',
-        component: resolve => require(['../components/webs/process/process.vue'], resolve),
-        meta: { title: '可拖拽流程图' }
-      },
+      // {
+      //   path: '/admin/process',
+      //   component: resolve => require(['../components/webs/process/process.vue'], resolve),
+      //   meta: { title: '可拖拽流程图' }
+      // },
       {
         path: '/admin/battery',
         component: resolve => require(['../components/webs/battery/battery.vue'], resolve),

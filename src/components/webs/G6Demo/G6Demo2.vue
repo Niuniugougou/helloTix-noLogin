@@ -1,3 +1,9 @@
+/*
+ * @Author: tix 
+ * @Date: 2020-12-16 14:03:15 
+ * @Last Modified by:   tix 
+ * @Last Modified time: 2020-12-16 14:03:15 
+ */
 <template>
     <div>
         <div>G6Demo2</div>
@@ -6,6 +12,8 @@
 </template>
 <script>
 import G6 from '@antv/g6';
+const Util = G6.Util;
+
 export default {
     data () {
         return {
@@ -90,34 +98,156 @@ export default {
             // Scale Animation
             G6.registerNode(
                 'circle-animate',
-                {},
-                'rect',
+                {
+                    afterDraw (cfg, group) {
+                        const shape = group.get('children')[0];
+                        shape.animate(
+                            (ratio) => {
+                                const diff = ratio <= 0.5 ? ratio * 10 : (1 - ratio) * 10;
+                                return {
+                                    r: cfg.size / 2 + diff,
+                                };
+                            },
+                            {
+                                repeat: true,
+                                duration: 3000,
+                                easing: 'easeCubic',
+                            },
+                        );
+                    },
+                },
+                'circle',
             );
 
             // Background Animation
             G6.registerNode(
                 'background-animate',
-                {},
+                {
+                    afterDraw (cfg, group) {
+                        const r = cfg.size / 2;
+                        const back1 = group.addShape('circle', {
+                            zIndex: -3,
+                            attrs: {
+                                x: 0,
+                                y: 0,
+                                r,
+                                fill: cfg.color,
+                                opacity: 0.6,
+                            },
+                            name: 'back1-shape',
+                        });
+                        const back2 = group.addShape('circle', {
+                            zIndex: -2,
+                            attrs: {
+                                x: 0,
+                                y: 0,
+                                r,
+                                fill: cfg.color,
+                                opacity: 0.6,
+                            },
+                            name: 'back2-shape',
+                        });
+                        const back3 = group.addShape('circle', {
+                            zIndex: -1,
+                            attrs: {
+                                x: 0,
+                                y: 0,
+                                r,
+                                fill: cfg.color,
+                                opacity: 0.6,
+                            },
+                            name: 'back3-shape',
+                        });
+                        group.sort(); // Sort according to the zIndex
+                        back1.animate(
+                            {
+                                // Magnifying and disappearing
+                                r: r + 10,
+                                opacity: 0.1,
+                            },
+                            {
+                                duration: 3000,
+                                easing: 'easeCubic',
+                                delay: 0,
+                                repeat: true, // repeat
+                            },
+                        ); // no delay
+                        back2.animate(
+                            {
+                                // Magnifying and disappearing
+                                r: r + 10,
+                                opacity: 0.1,
+                            },
+                            {
+                                duration: 3000,
+                                easing: 'easeCubic',
+                                delay: 1000,
+                                repeat: true, // repeat
+                            },
+                        ); // 1s delay
+                        back3.animate(
+                            {
+                                // Magnifying and disappearing
+                                r: r + 10,
+                                opacity: 0.1,
+                            },
+                            {
+                                duration: 3000,
+                                easing: 'easeCubic',
+                                delay: 2000,
+                                repeat: true, // repeat
+                            },
+                        ); // 3s delay
+                    },
+                },
                 'circle',
             );
 
             // Image animation
             G6.registerNode(
                 'inner-animate',
-                {},
+                {
+                    afterDraw (cfg, group) {
+                        const size = cfg.size;
+                        const width = size[0] - 12;
+                        const height = size[1] - 12;
+                        const image = group.addShape('image', {
+                            attrs: {
+                                x: -width / 2,
+                                y: -height / 2,
+                                width,
+                                height,
+                                img: cfg.img,
+                            },
+                            name: 'image-shape',
+                        });
+                        image.animate(
+                            (ratio) => {
+                                const matrix = Util.mat3.create();
+                                const toMatrix = Util.transform(matrix, [['r', ratio * Math.PI * 2]]);
+                                return {
+                                    matrix: toMatrix,
+                                };
+                            },
+                            {
+                                repeat: true,
+                                duration: 3000,
+                                easing: 'easeCubic',
+                            },
+                        );
+                    },
+                },
                 'rect',
             );
 
             const container = document.getElementById('G6Demo2');
             const width = container.scrollWidth;
             const height = container.scrollHeight || 500;
-            this.treeOne = new G6.Graph({
+            const graph = new G6.Graph({
                 container: 'G6Demo2',
                 width,
                 height,
                 defaultNode: {
-                    type: 'rect',
-                    size: [80, 40],
                     style: {
                         fill: '#DEE9FF',
                         stroke: '#5B8FF9',
@@ -130,8 +260,8 @@ export default {
                     },
                 },
             });
-            this.treeOne.data(data);
-            this.treeOne.render();
+            graph.data(data);
+            graph.render();
         }
     }
 }

@@ -184,15 +184,15 @@ module.exports = {
                     "icon": "news",
                     "children": []
                 },
-                {
-                    "id": "154",
-                    "parentId": "15",
-                    "url": "/admin/process",
-                    "name": "可拖拽流程图",
-                    "sequence": 4,
-                    "icon": "news",
-                    "children": []
-                },
+                // {
+                //     "id": "154",
+                //     "parentId": "15",
+                //     "url": "/admin/process",
+                //     "name": "可拖拽流程图",
+                //     "sequence": 4,
+                //     "icon": "news",
+                //     "children": []
+                // },
                 {
                     "id": "155",
                     "parentId": "15",
@@ -239,22 +239,32 @@ module.exports = {
                     "children": []
                 },
                 {
-                    "id": "160",
+                    "id": "162",
                     "parentId": "15",
-                    "url": "/admin/G6demo1",
-                    "name": "G6Demo1",
-                    "sequence": 10,
-                    "icon": "news",
-                    "children": []
-                },
-                {
-                    "id": "161",
-                    "parentId": "15",
-                    "url": "/admin/G6demo2",
+                    "url": "/admin/G6demo",
                     "name": "G6Demo2",
                     "sequence": 10,
                     "icon": "news",
-                    "children": []
+                    "children": [
+                        {
+                            "id": "1621",
+                            "parentId": "162",
+                            "url": "/admin/G6demo1",
+                            "name": "自定义图",
+                            "sequence": 1,
+                            "icon": "news",
+                            "children": []
+                        },
+                        {
+                            "id": "1622",
+                            "parentId": "162",
+                            "url": "/admin/G6demo2",
+                            "name": "自定义",
+                            "sequence": 2,
+                            "icon": "news",
+                            "children": []
+                        }
+                    ]
                 },
             ]
         },

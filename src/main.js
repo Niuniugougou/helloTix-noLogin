@@ -42,6 +42,9 @@ Vue.component('Icon', Icon);
 //为了解决重启后第一次请求菜单报错问题
 import util from '@/libs/util.js'
 
+import G6 from '@antv/g6'
+Vue.use(G6)
+
 // 核心插件
 Vue.use(d2Admin)
 
