@@ -241,8 +241,17 @@ module.exports = {
                 {
                     "id": "160",
                     "parentId": "15",
-                    "url": "/admin/G6Demo",
+                    "url": "/admin/G6demo1",
                     "name": "G6Demo1",
+                    "sequence": 10,
+                    "icon": "news",
+                    "children": []
+                },
+                {
+                    "id": "161",
+                    "parentId": "15",
+                    "url": "/admin/G6demo2",
+                    "name": "G6Demo2",
                     "sequence": 10,
                     "icon": "news",
                     "children": []
