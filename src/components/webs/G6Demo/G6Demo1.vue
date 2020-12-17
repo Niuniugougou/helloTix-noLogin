@@ -1,8 +1,10 @@
 <template>
     <d2-container>
-        <div style="position:absolute;">G6Demo1--自定义图形、拖拽、移入效果（建议G6版本大于3.8.3）</div>
-        <div id="G6Demo1"
-             style="height: 100%;"></div>
+        <div style="position:absolute;">
+            G6Demo1--自定义图形、拖拽、移入效果（建议G6版本大于3.8.3）
+            <el-button @click="downloadimg">导出图片</el-button>
+        </div>
+        <div id="G6Demo1" style="height: 100%;"></div>
     </d2-container>
 </template>
 <script>
@@ -287,6 +289,21 @@ export default {
             });
             this.treeOne.read(data);
         },
+        downloadimg () {
+            let url = this.treeOne.toDataURL('image/png','#fff');
+            let a = document.createElement("a");
+            a.download = 1;
+            a.href = url;
+            a.setAttribute("id", "donwLoadData");
+            // 防止反复添加
+            if (document.getElementById("donwLoadData")) {
+                document.body.removeChild(
+                    document.getElementById("donwLoadData")
+                );
+            }
+            document.body.appendChild(a);
+            a.click();
+        }
     }
 }
 </script>

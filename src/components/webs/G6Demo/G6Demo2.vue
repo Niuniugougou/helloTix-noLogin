@@ -1,28 +1,41 @@
 /*
  * @Author: tix 
  * @Date: 2020-12-16 14:03:15 
- * @Last Modified by:   tix 
- * @Last Modified time: 2020-12-16 14:03:15 
+ * @Last Modified by: akang
+ * @Last Modified time: 2020-12-17 11:29:14
  */
 <template>
     <div>
-        <div>G6Demo2</div>
+        <div>G6Demo2
+            <imgDownloadForG6 :chartRef="treeOne" downloadName="图片下载" buttonName="下载" :iconName="iconName" :typeName="typeName" :isCircle="true"></imgDownloadForG6>
+        </div>
         <div id="G6Demo2"></div>
     </div>
 </template>
 <script>
 import G6 from '@antv/g6';
 const Util = G6.Util;
+import imgDownloadForG6 from "@/components/common/imgDownloadForG6"
 
 export default {
+    components: {
+        imgDownloadForG6
+    },
     data () {
         return {
             treeOne: null,
+            iconName: 'el-icon-edit',
+            typeName: 'success'
         }
     },
     mounted () {
         this.drawTree();
     },
+    // computed: {
+    //     treeName() {
+    //         return this.treeOne
+    //     }
+    // },
     methods: {
         drawTree () {
             if (this.treeOne) {
@@ -243,7 +256,7 @@ export default {
             const container = document.getElementById('G6Demo2');
             const width = container.scrollWidth;
             const height = container.scrollHeight || 500;
-            const graph = new G6.Graph({
+            this.treeOne = new G6.Graph({
                 container: 'G6Demo2',
                 width,
                 height,
@@ -260,8 +273,8 @@ export default {
                     },
                 },
             });
-            graph.data(data);
-            graph.render();
+            this.treeOne.data(data);
+            this.treeOne.render();
         }
     }
 }
