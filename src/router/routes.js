@@ -128,6 +128,11 @@ const frameIn = [
         meta: { title: 'G6Demo2' }
       },
       {
+        path: '/admin/moveForm',
+        component: resolve => require(['../components/webs/moveForm/index.vue'], resolve),
+        meta: { title: '动态例子' }
+      },
+      {
           path: '/404',
           component: resolve => require(['../components/page/404.vue'], resolve),
           meta: { title: '404' }

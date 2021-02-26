@@ -239,6 +239,15 @@ module.exports = {
                     "children": []
                 },
                 {
+                    "id": "160",
+                    "parentId": "15",
+                    "url": "/admin/moveForm",
+                    "name": "动态列子",
+                    "sequence": 10,
+                    "icon": "news",
+                    "children": []
+                },
+                {
                     "id": "162",
                     "parentId": "15",
                     "url": "/admin/G6demo",
